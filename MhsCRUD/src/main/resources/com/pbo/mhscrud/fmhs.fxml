@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="594.0" prefWidth="949.0"
+            styleClass="form_container" stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.pbo.mhscrud.MhsController">
+    <children>
+        <VBox layoutX="35.0" layoutY="112.0" prefHeight="223.0"
+              prefWidth="292.0" spacing="15.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIM"/>
+                <TextField fx:id="tfNim" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama"/>
+                <TextField fx:id="tfNama" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi"/>
+                <TextField fx:id="tfProdi" />
+            </children>
+        </VBox>
+        <TableView fx:id="tbMhs" layoutX="366.0" layoutY="130.0"
+                   onMouseClicked="#getData" prefHeight="223.0" prefWidth="510.0"
+                   AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0">
+            <columns>
+                <TableColumn fx:id="cNim" prefWidth="171.0" text="NIM" /><TableColumn fx:id="cNama" prefWidth="199.0" text="Nama"/><TableColumn fx:id="cProdi" prefWidth="135.0"
+                                                                                                                                                text="Prodi" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="335.0" layoutY="30.0"
+               styleClass="title" text="CRUD Mahasiswa" />
+        <ButtonBar layoutX="121.0" layoutY="432.0" prefHeight="40.0" prefWidth="442.0">
+            <buttons>
+                <Button fx:id="tbSave" mnemonicParsing="false"
+                        onAction="#addData" text="Save" />
+                <Button fx:id="tbUpdate" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateData" text="Update" />
+                <Button fx:id="tbDel" layoutX="292.0" layoutY="18.0"
+                        mnemonicParsing="false" onAction="#delData" text="Delete" />
+                <Button fx:id="tbClear" layoutX="207.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearText" text="Clear" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
